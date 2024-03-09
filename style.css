@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font -- "Barlow Semi Condensed", sans-serif; */
+
+
+:root {
+    --violet-background: hsl(263, 55%, 52%);
+    --blue-text-back: hsl(217, 19%, 35%);
+    --black-background: hsl(219, 29%, 14%);
+    --White-background: hsl(0, 0%, 100%);
+    --gray--text-back: hsl(0, 0%, 81%);
+    --background-color: hsl(210, 46%, 95%);
+}
+
+* {box-sizing:border-box;}
+h2,p {margin:0;}
+h2 {font-weight:600; line-height: 1;}
+p {opacity:0.5;}
+
+body {
+    margin:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    font-family:"Barlow Semi Condensed", sans-serif;
+    font-weight:500;
+
+    background-color: var(--background-color);
+
+    min-height:100vh;
+}
+
+.id {
+    display:flex;
+    gap:1.5rem;
+}
+
+.bg-color-1  {background-color: var(--violet-background);}
+.bg-color-2  {background-color: var(--blue-text-back);}
+.bg-color-3  {background-color: var(--White-background);}
+.bg-color-4  {background-color: var(--black-background);}
+.bg-color-5  {background-color:  var(--White-background);}
+
+.text-clr {color: var(--White-background);}
+.text-clr-2 {color: var(--blue-text-back);}
+
+.testimonial-grid {
+    padding: 2rem 2rem;
+    width: (95%,70rem);
+}
+
+.card {
+    padding:2rem;
+    font-size:13px;
+    border-radius: 0.5rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--violet-background) / 0.25);
+}
+
+.card.quote {
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+}
+
+.card img {
+    width:1.75rem;
+    border-radius:50%;
+    line-height: 1;
+}
+
+.card .name {
+    font-size:13px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.card .position {
+    opacity: 0.5;
+    font-size:11px;
+    margin:0;
+}
+
+.testimonial-grid {
+    display:grid;
+    gap:1.5rem;
+
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+}
+
+.card:nth-child(1) {grid-area:one;}
+.card:nth-child(2) {grid-area:two;}
+.card:nth-child(3) {grid-area:three;}
+.card:nth-child(4) {grid-area:four;}
+.card:nth-child(5) {grid-area: five;}
+
+
+@media screen and (min-width:55em) {
+    .testimonial-grid {
+        grid-template-areas: 
+        "one one two five"
+        "three four four five";
+    }
+}
+
+.id {
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-top:1.5rem;
+}
